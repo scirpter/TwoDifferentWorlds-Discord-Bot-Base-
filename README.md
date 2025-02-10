@@ -41,7 +41,7 @@ This bot uses a per-file command structure. This means that each command is stor
     - some_command.py | **/example subgroup some_command [args]**
 
 > **Note**
-> Files inside the `etc` directory are considered being anything else than a command, like a Modal or a View.
+> Files inside the `etc` directory are considered being anything else than a command, like a Modal or a View. Those are ignored by the command registering system.
 
 Notice how there's an `index.py` file in every folder. The `./index.py` file (not the one in `subgroup/`) is the Cog that holds all event listeners and variables for this specific command category. Everything you initialize there is globally usable within that category, as the class instance is passed along every command. The `./subgroup/index.py` file is just the group that is necessary to let Discord register the subcategory. If you wish to not layer your commands, don't use subgroups at all and change the class type in the first `index.py` to `Cog` instead of `GroupCog`. That way you can make commands like this: **/some_command [args]**.
 
