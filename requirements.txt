@@ -1,0 +1,9 @@
+cryptography  # potential dep
+tortoise-orm # orm
+git+https://github.com/Rapptz/discord.py  # discord api
+enhanced_str  # custom print formatting
+aiopath  # async pathing
+aiofiles  # async file io
+ruff  # linting
+pytest  # testing
+aiomysql # mysql
